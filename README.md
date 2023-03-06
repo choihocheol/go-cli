@@ -1,5 +1,5 @@
 ```go
-import "github.com/choihocheol/gocli"
+import "github.com/choihocheol/go-cli"
 ```
 
 # Go CLI
@@ -14,12 +14,12 @@ package main
 import (
 	"fmt"
 
-	"github.com/choihocheol/gocli"
+	"github.com/choihocheol/go-cli"
 )
 
 func main() {
 	command := "ls"
-	output, err := gocli.Run(command)
+	output, err := go-cli.Run(command)
 	if err != nil {
 		panic(err)
 	}
@@ -33,7 +33,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/choihocheol/gocli"
+	"github.com/choihocheol/go-cli"
 )
 
 func main() {
@@ -42,7 +42,7 @@ func main() {
 		"s/^addr = \".*:8000\"/addr = \"0.0.0.0:8080\"/" \
 		config.toml
 	`
-	output, err := gocli.Run(command)
+	output, err := go-cli.Run(command)
 	if err != nil {
 		panic(err)
 	}
