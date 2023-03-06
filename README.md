@@ -1,7 +1,5 @@
-[![Go Reference](https://pkg.go.dev/badge/github.com/choihocheol/go-cli.svg)](https://pkg.go.dev/github.com/choihocheol/go-cli)
-
 ```go
-import "github.com/choihocheol/go-cli"
+import "github.com/choihocheol/gocli"
 ```
 
 # Go CLI
@@ -16,7 +14,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/choihocheol/go-cli"
+	"github.com/choihocheol/gocli"
 )
 
 func main() {
@@ -35,7 +33,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/choihocheol/go-cli"
+	"github.com/choihocheol/gocli"
 )
 
 func main() {
