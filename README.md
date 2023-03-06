@@ -19,7 +19,7 @@ import (
 
 func main() {
 	command := "ls"
-	output, err := go-cli.Run(command)
+	output, err := gocli.Run(command)
 	if err != nil {
 		panic(err)
 	}
@@ -42,7 +42,7 @@ func main() {
 		"s/^addr = \".*:8000\"/addr = \"0.0.0.0:8080\"/" \
 		config.toml
 	`
-	output, err := go-cli.Run(command)
+	output, err := gocli.Run(command)
 	if err != nil {
 		panic(err)
 	}
