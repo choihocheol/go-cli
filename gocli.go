@@ -7,9 +7,11 @@ import (
 	"os/exec"
 )
 
-func Run(command string) (error) {
+func Run(command string, isOuptut bool) (error) {
 	cmd := exec.Command("sh", "-c", command)
-	cmd.Stdout = os.Stdout
+	if isOuptut {
+		cmd.Stdout = os.Stdout
+	}
 
 	err := cmd.Run()
 	if err != nil {
