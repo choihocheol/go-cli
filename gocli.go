@@ -1,22 +1,20 @@
 package gocli
 
 import (
-	"bytes"
 	"errors"
 	"fmt"
+	"os"
 	"os/exec"
 )
 
-func Run(command string) (string, error) {
-	cmd := exec.Command("bash", "-c", command)
-
-	var output bytes.Buffer
-	cmd.Stdout = &output
+func Run(command string) (error) {
+	cmd := exec.Command("sh", "-c", command)
+	cmd.Stdout = os.Stdout
 
 	err := cmd.Run()
 	if err != nil {
-		return "", errors.New(fmt.Sprintf("Command not worked: %s", command))
+		return errors.New(fmt.Sprintf("Command not worked: %s", command))
 	}
 
-	return output.String(), nil
+	return nil
 }
